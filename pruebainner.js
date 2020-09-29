@@ -89,3 +89,11 @@ function generartablewomen(){
                 bodytable.innerHTML +=row;}
             }
             }
+            function borrartabla(){
+                const bodytable = document.getElementById('body-table-users')
+                console.log(bodytable)
+                for (let i=0; i<users.length; i++){
+                   const row ='<tr></tr>'
+                    bodytable.innerHTML +=row;}
+                }
+                
