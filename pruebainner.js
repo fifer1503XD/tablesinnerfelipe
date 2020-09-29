@@ -104,6 +104,13 @@ function generartablewomen(){
                    const row ='<tr></tr>'
                     bodytable.innerHTML =row;}
                 }
+                function borrarcard(){
+                    const bodycard = document.getElementById('content-cards')
+                    console.log(bodycard)
+                    for (let i=0; i<users.length; i++){
+                       const row =''
+                       bodycard.innerHTML =row;}
+                    }    
                 
                 function generarcard(){
                     const bodycard = document.getElementById('content-cards')
