@@ -80,7 +80,6 @@ function generartablewomen(){
         }
         }
         function generartablerango(){
-    
             const bodytable = document.getElementById('body-table-users')
             console.log(bodytable)
             for (let i=0; i<users.length; i++){
@@ -89,6 +88,15 @@ function generartablewomen(){
                 bodytable.innerHTML +=row;}
             }
             }
+            function generartablecorreo(){
+                const bodytable = document.getElementById('body-table-users')
+                console.log(bodytable)
+                for (let i=0; i<users.length; i++){
+                    let email=users[i].email;
+                    if(email.includes('@academlo')){const row ='<tr><td>'+ users[i].name+'</td><td>'+ users[i].email+'</td><td>'+users[i].age+'</td><td>'+users[i].gender+'</td><td>'+users[i].social[0].url+'</td><td>'+users[i].social[1].url+'</td></tr>'
+                    bodytable.innerHTML +=row;}
+                }
+                }
             function borrartabla(){
                 const bodytable = document.getElementById('body-table-users')
                 console.log(bodytable)
