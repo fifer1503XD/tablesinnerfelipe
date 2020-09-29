@@ -94,6 +94,6 @@ function generartablewomen(){
                 console.log(bodytable)
                 for (let i=0; i<users.length; i++){
                    const row ='<tr></tr>'
-                    bodytable.innerHTML +=row;}
+                    bodytable.innerHTML =row;}
                 }
                 
