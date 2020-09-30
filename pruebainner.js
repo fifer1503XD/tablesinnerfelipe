@@ -7,7 +7,7 @@ const users = [
             { name: 'facebook', url: 'facebook/erik' },
             { name: 'twitter', url: 'twitter/erik' }
         ],
-        gender: 'Male'
+        gender: 'MAle'
     },
     {
         name: 'Maria',
@@ -27,7 +27,7 @@ const users = [
             { name: 'facebook', url: 'facebook/georg' },
             { name: 'twitter', url: 'twitter/georg' }
         ],
-        gender: 'Male'
+        gender: 'MaLe'
     },
     {
         name: 'Andrea',
@@ -47,7 +47,7 @@ const users = [
             { name: 'facebook', url: 'facebook/antonia' },
             { name: 'twitter', url: 'twitter/antonia' }
         ],
-        gender: 'Female'
+        gender: 'FeMale'
     },
     {
         name: 'Oscar',
@@ -57,7 +57,7 @@ const users = [
             { name: 'facebook', url: 'facebook/oscar' },
             { name: 'twitter', url: 'twiter/oscar' }
         ],
-        gender: 'Male'
+        gender: 'male'
     },
     {
         name: 'Felipe',
@@ -77,7 +77,7 @@ const users = [
             { name: 'facebook', url: 'facebook/Daniela' },
             { name: 'twitter', url: 'twitter/Daniela' }
         ],
-        gender: 'Female'
+        gender: 'female'
     },
 ]
 
@@ -90,22 +90,22 @@ bodytable.innerHTML +=row;
 }
 }
 function generartablewomen(){
-    
     const bodytable = document.getElementById('body-table-users')
     console.log(bodytable)
     for (let i=0; i<users.length; i++){
         let genero=users[i].gender;
-        if(genero=='Female'){const row ='<tr><td>'+ users[i].name+'</td><td>'+ users[i].email+'</td><td>'+users[i].age+'</td><td>'+users[i].gender+'</td><td>'+users[i].social[0].url+'</td><td>'+users[i].social[1].url+'</td></tr>'
+        let generom=genero.toLowerCase()
+        if(generom=='female'){const row ='<tr><td>'+ users[i].name+'</td><td>'+ users[i].email+'</td><td>'+users[i].age+'</td><td>'+users[i].gender+'</td><td>'+users[i].social[0].url+'</td><td>'+users[i].social[1].url+'</td></tr>'
         bodytable.innerHTML +=row;}
     }
     }
     function generartablemen(){
-    
         const bodytable = document.getElementById('body-table-users')
         console.log(bodytable)
         for (let i=0; i<users.length; i++){
             let genero=users[i].gender;
-            if(genero=='Male'){const row ='<tr><td>'+ users[i].name+'</td><td>'+ users[i].email+'</td><td>'+users[i].age+'</td><td>'+users[i].gender+'</td><td>'+users[i].social[0].url+'</td><td>'+users[i].social[1].url+'</td></tr>'
+            let generom=genero.toLowerCase()
+            if(generom=='male'){const row ='<tr><td>'+ users[i].name+'</td><td>'+ users[i].email+'</td><td>'+users[i].age+'</td><td>'+users[i].gender+'</td><td>'+users[i].social[0].url+'</td><td>'+users[i].social[1].url+'</td></tr>'
             bodytable.innerHTML +=row;}
         }
         }
@@ -114,7 +114,7 @@ function generartablewomen(){
             console.log(bodytable)
             for (let i=0; i<users.length; i++){
                 let age=users[i].age;
-                if(age>20 && age<40){const row ='<tr><td>'+ users[i].name+'</td><td>'+ users[i].email+'</td><td>'+users[i].age+'</td><td>'+users[i].gender+'</td><td>'+users[i].social[0].url+'</td><td>'+users[i].social[1].url+'</td></tr>'
+                if(age>20 && age<40){const row ='<tr class=""><td>'+ users[i].name+'</td><td>'+ users[i].email+'</td><td>'+users[i].age+'</td><td>'+users[i].gender+'</td><td>'+users[i].social[0].url+'</td><td>'+users[i].social[1].url+'</td></tr>'
                 bodytable.innerHTML +=row;}
             }
             }
@@ -147,11 +147,12 @@ function generartablewomen(){
                     console.log(bodycard)
                     for (let i=0; i<users.length; i++){
                         let genero=users[i].gender;
-                        if(genero=='Female'){
-                    const row ='<div class="col mb-4"><div class="card border-primary mb-3" style="width: 18rem;"><img id="imagencard" src="https://image.freepik.com/foto-gratis/color-rosa-electrico-abstraccion_23-2147734201.jpg" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">USUARIO'+i+'</h5><p class="card-text"> Nombre : '+users[i].name+'</p><p class="card-text">Email: '+users[i].email+'</p><p class="card-text"> Edad: '+users[i].age+'</p><p class="card-text"> Genero: '+users[i].gender+'</p><p class="card-text">Facebook: '+users[i].social[0].url+'</p><p class="card-text"Twitter :>'+users[i].social[1].url+'</p><a href="#" class="btn btn-primary">Go somewhere</a></div></div></div>'
+                        let generom=genero.toLowerCase()
+                        if(generom=='female'){
+                    const row ='<div class="col mb-4"><div class="card text-white bg-success mb-3" style="width: 18rem;"><div class="card-body"><h5 class="card-title">USUARIO'+i+'</h5><p class="card-text"> Nombre : '+users[i].name+'</p><p class="card-text">Email: '+users[i].email+'</p><p class="card-text"> Edad: '+users[i].age+'</p><p class="card-text"> Genero: '+users[i].gender+'</p><p class="card-text">Facebook: '+users[i].social[0].url+'</p><p class="card-text"Twitter :>'+users[i].social[1].url+'</p>'
                     bodycard.innerHTML +=row;}
                         else{
-                            const row ='<div class="col mb-4"><div class="card" style="width: 18rem;"><img id="imagencard" src="https://image.freepik.com/foto-gratis/color-fondo-decorativo-azul-degradado-diagonal-textura-rayada_76263-671.jpg" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">USUARIO'+i+'</h5><p class="card-text"> Nombre : '+users[i].name+'</p><p class="card-text">Email: '+users[i].email+'</p><p class="card-text"> Edad: '+users[i].age+'</p><p class="card-text"> Genero: '+users[i].gender+'</p><p class="card-text">Facebook: '+users[i].social[0].url+'</p><p class="card-text"Twitter :>'+users[i].social[1].url+'</p><a href="#" class="btn btn-primary">Go somewhere</a></div></div></div>'
+                            const row ='<div class="col mb-4"><div class="card text-white bg-dark mb-3" style="width: 18rem;"><div class="card-body"><h5 class="card-title">USUARIO'+i+'</h5><p class="card-text"> Nombre : '+users[i].name+'</p><p class="card-text">Email: '+users[i].email+'</p><p class="card-text"> Edad: '+users[i].age+'</p><p class="card-text"> Genero: '+users[i].gender+'</p><p class="card-text">Facebook: '+users[i].social[0].url+'</p><p class="card-text"Twitter :>'+users[i].social[1].url+'</p>'
                             bodycard.innerHTML +=row;}  
                         }
                     
