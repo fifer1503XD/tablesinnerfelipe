@@ -10,6 +10,16 @@ const users = [
         gender: 'Male'
     },
     {
+        name: 'Maria',
+        age: 15,
+        email: 'maria@uaq.mx',
+        social: [
+            { name: 'facebook', url: 'facebook/Maria' },
+            { name: 'twitter', url: 'twitter/Maria' }
+        ],
+        gender: 'Female'
+    },
+    {
         name: 'Georg',
         age: 33,
         email: 'georg@academlo.com',
